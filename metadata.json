@@ -1,0 +1,6 @@
+{
+  "name": "Sagepage Studio - Website Templates for Coaches",
+  "description": "Downloadable HTML & Tailwind CSS website templates for coaches, creatives, and solo service businesses. Edit in minutes, launch in a weekend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

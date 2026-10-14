@@ -1,0 +1,16 @@
+{
+  "name": "Folio Portfolio Template",
+  "short_name": "Folio",
+  "description": "Minimalist editorial website template for photographers and designers.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F5F3EF",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "assets/img/og-image.webp",
+      "sizes": "1200x630",
+      "type": "image/webp"
+    }
+  ]
+}

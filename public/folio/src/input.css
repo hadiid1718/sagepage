@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../assets/css/theme.css";
+
+/* Custom utility classes */
+.aspect-photo {
+  aspect-ratio: 4 / 5;
+}
+.aspect-landscape {
+  aspect-ratio: 16 / 10;
+}
+.aspect-editorial {
+  aspect-ratio: 3 / 4;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F3EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #8C857B;
+  border-radius: 3px;
+}

@@ -1,0 +1,16 @@
+FOLIO TEMPLATE LICENSE AGREEMENT
+Version 1.0 (Standard License)
+
+1. GRANT OF LICENSE
+Sagepage Studio grants the purchaser a perpetual, non-exclusive, non-transferable license to use, modify, customize, and deploy the Folio template for one (1) single end-product website (for personal portfolio use or on behalf of a single client).
+
+2. PERMITTED RIGHTS
+- You may customize HTML, CSS variables, typography, layouts, and JavaScript without limitation.
+- You may host and deploy the compiled site on any static web host (Netlify, Cloudflare, Vercel, cPanel, GitHub Pages, etc.).
+- You may use the template for commercial photography, art, design, or business practices.
+
+3. PROHIBITIONS
+- You may NOT resell, redistribute, sub-license, bundle, or share the raw template files, uncompiled source code, or documentation.
+- You may NOT convert or upload this template as a publicly downloadable theme on platforms, marketplaces, or website builders.
+
+For multi-site or freelancer commercial agency licenses, contact support@sagepage.co.

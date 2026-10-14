@@ -1,0 +1,25 @@
+{
+  "name": "folio-template",
+  "version": "1.0.0",
+  "description": "Editorial website template for photographers, designers and artists. HTML5, Tailwind CSS and vanilla JS.",
+  "scripts": {
+    "dev": "npx live-server . --port=3000 --watch=*.html,assets/**/*",
+    "build": "npx tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
+    "preview": "npx live-server ."
+  },
+  "keywords": [
+    "portfolio",
+    "photographer",
+    "designer",
+    "artist",
+    "template",
+    "html5",
+    "tailwindcss"
+  ],
+  "author": "Sagepage Studio",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "tailwindcss": "^3.4.1"
+  }
+}

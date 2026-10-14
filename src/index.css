@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-warm-white: #FAF7F2;
+  --color-sage: #A3B18A;
+  --color-forest: #344E41;
+  --color-clay: #D9A68B;
+  --color-charcoal: #2B2B2B;
+  --color-beige: #E9E4D8;
+}
+
+:root {
+  --color-bg: #FAF7F2;
+  --color-sage: #A3B18A;
+  --color-forest: #344E41;
+  --color-clay: #D9A68B;
+  --color-charcoal: #2B2B2B;
+  --color-beige: #E9E4D8;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #2B2B2B;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Custom smooth scroll and button active states */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessible focus ring */
+*:focus-visible {
+  outline: 2px solid #344E41;
+  outline-offset: 2px;
+}

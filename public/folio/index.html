@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- EDIT: Page Title and Meta Description -->
+  <title>[Elena Rostova] · Visual Artist & Editorial Photographer</title>
+  <meta name="description" content="[Portfolio of Elena Rostova: editorial photography, visual arts, and commercial campaigns based in New York and Paris.]" />
+  
+  <!-- Open Graph & Twitter Cards -->
+  <meta property="og:title" content="[Elena Rostova] · Visual Artist & Editorial Photographer" />
+  <meta property="og:description" content="[Editorial photography and visual arts portfolio.]" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-image.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Stylesheets (Zero build required - works out-of-the-box) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="icon" type="image/webp" href="assets/img/favicon.webp" />
+
+  <!-- Schema.org Person & Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "[Elena Rostova]",
+    "jobTitle": "Editorial Photographer & Visual Artist",
+    "url": "https://example.com",
+    "sameAs": [
+      "https://instagram.com/elenarostova"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-[#F5F3EF] text-[#111111] antialiased">
+  
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#111111] focus:text-[#F5F3EF] focus:rounded">
+    Skip to content
+  </a>
+
+  <!-- ========================================================================
+       STICKY HEADER (Transparent over hero, solidifies on scroll)
+       ======================================================================== -->
+  <header id="folio-header" data-transparent-hero="true" class="fixed top-0 left-0 right-0 z-40 header-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <!-- EDIT: Brand Moniker -->
+      <a href="index.html" class="font-serif text-2xl tracking-wide font-normal hover:opacity-80 transition-opacity">
+        <span class="js-brand-name">[Elena Rostova]</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium" aria-label="Main Navigation">
+        <a href="portfolio.html" class="hover:text-[#E4572E] transition-colors py-1">Portfolio</a>
+        <a href="about.html" class="hover:text-[#E4572E] transition-colors py-1">About</a>
+        <a href="services.html" class="hover:text-[#E4572E] transition-colors py-1">Services</a>
+        <a href="contact.html" class="hover:text-[#E4572E] transition-colors py-1">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA Button -->
+      <div class="hidden md:block">
+        <a href="contact.html" class="btn-primary text-xs uppercase tracking-wider px-5 py-2.5">
+          Inquire
+        </a>
+      </div>
+
+      <!-- Mobile Menu Hamburger -->
+      <button id="mobile-menu-toggle" class="md:hidden p-2 text-inherit focus:outline-none" aria-label="Open navigation menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-[#111111] text-[#F5F3EF] hidden flex-col justify-between p-8" aria-label="Mobile Menu">
+    <div class="flex justify-between items-center pb-6 border-b border-white/10">
+      <span class="font-serif text-xl tracking-wide">[Elena Rostova]</span>
+      <button id="mobile-menu-close" class="p-2 text-white focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 font-serif text-3xl">
+      <a href="index.html" class="text-white hover:text-[#E4572E]">Home</a>
+      <a href="portfolio.html" class="text-white/80 hover:text-white">Portfolio</a>
+      <a href="project.html" class="text-white/80 hover:text-white">Case Study</a>
+      <a href="about.html" class="text-white/80 hover:text-white">About</a>
+      <a href="services.html" class="text-white/80 hover:text-white">Services</a>
+      <a href="contact.html" class="text-white/80 hover:text-white">Contact</a>
+    </nav>
+    <div class="pt-6 border-t border-white/10 text-xs text-white/60 space-y-1">
+      <p><span class="js-brand-email">studio@elenarostova.com</span></p>
+      <p><span class="js-brand-location">New York & Paris</span></p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ========================================================================
+         1. FULL-SCREEN HERO IMAGE WITH NAME & ROLE (Dark contrast overlay)
+         ======================================================================== -->
+    <!-- EDIT: Hero section background & headline -->
+    <section class="relative h-screen min-h-[640px] flex items-center justify-center text-center overflow-hidden bg-[#111111]">
+      <img 
+        src="assets/img/hero.webp" 
+        alt="[Elena Rostova editorial photography artwork]" 
+        width="1920" 
+        height="1200" 
+        class="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-105 transition-transform duration-1000 ease-out" 
+      />
+      <!-- Contrast Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
+
+      <div class="relative z-10 max-w-4xl px-6 space-y-6 text-[#F5F3EF]">
+        <span class="inline-block text-xs uppercase tracking-[0.25em] text-[#E4572E] font-medium">
+          [Selected Works · 2024–2026]
+        </span>
+        <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal tracking-tight leading-none text-white">
+          [Elena Rostova]
+        </h1>
+        <p class="font-serif text-xl sm:text-2xl text-white/85 max-w-xl mx-auto italic font-light">
+          [Visual Artist & Editorial Photographer exploring the quiet tensions of human form and architectural light.]
+        </p>
+        <div class="pt-6 flex flex-wrap items-center justify-center gap-4">
+          <a href="portfolio.html" class="btn-primary text-xs uppercase tracking-widest px-8 py-3.5">
+            View Selected Work
+          </a>
+          <a href="about.html" class="btn-secondary border-white/80 text-white hover:bg-white hover:text-[#111111] text-xs uppercase tracking-widest px-8 py-3.5">
+            About the Studio
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll down indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 text-[10px] uppercase tracking-widest flex flex-col items-center gap-2">
+        <span>Scroll to Explore</span>
+        <span class="w-px h-6 bg-white/40 animate-pulse"></span>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         2. FEATURED WORK GRID (6 images with category labels, titles, aspect boxes)
+         ======================================================================== -->
+    <!-- EDIT: Featured works gallery -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-24 sm:py-32">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between pb-8 mb-12 border-b border-[#E4DFD6] gap-4">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-[#8C857B] font-medium block mb-1">
+            Selected Archives
+          </span>
+          <h2 class="font-serif text-4xl sm:text-5xl text-[#111111]">
+            Featured Projects
+          </h2>
+        </div>
+        <a href="portfolio.html" class="accent-link text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 hover:underline">
+          <span>View All Works (12) →</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        
+        <!-- Work 01 -->
+        <article class="group cursor-pointer">
+          <a href="project.html" class="block">
+            <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+              <img 
+                src="assets/img/work-01.webp" 
+                alt="[Monolith: Ceramic study and architectural shadow]" 
+                width="800" 
+                height="1066" 
+                loading="lazy" 
+                class="img-editorial w-full h-full object-cover" 
+              />
+            </div>
+            <div class="pt-4 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-[#8C857B]">[Portraits]</span>
+                <h3 class="font-serif text-2xl text-[#111111] group-hover:text-[#E4572E] transition-colors mt-0.5">
+                  [Monolith Series]
+                </h3>
+              </div>
+              <span class="text-xs font-mono text-[#8C857B]">[2026]</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Work 02 -->
+        <article class="group cursor-pointer">
+          <a href="project.html" class="block">
+            <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+              <img 
+                src="assets/img/work-02.webp" 
+                alt="[Solis: Coastal light study in Marseille]" 
+                width="800" 
+                height="1066" 
+                loading="lazy" 
+                class="img-editorial w-full h-full object-cover" 
+              />
+            </div>
+            <div class="pt-4 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-[#8C857B]">[Brand]</span>
+                <h3 class="font-serif text-2xl text-[#111111] group-hover:text-[#E4572E] transition-colors mt-0.5">
+                  [Solis Campaign]
+                </h3>
+              </div>
+              <span class="text-xs font-mono text-[#8C857B]">[2026]</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Work 03 -->
+        <article class="group cursor-pointer">
+          <a href="project.html" class="block">
+            <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+              <img 
+                src="assets/img/work-03.webp" 
+                alt="[The Quiet Gesture: High fashion editorial for Revue]" 
+                width="800" 
+                height="1066" 
+                loading="lazy" 
+                class="img-editorial w-full h-full object-cover" 
+              />
+            </div>
+            <div class="pt-4 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-[#8C857B]">[Editorial]</span>
+                <h3 class="font-serif text-2xl text-[#111111] group-hover:text-[#E4572E] transition-colors mt-0.5">
+                  [The Quiet Gesture]
+                </h3>
+              </div>
+              <span class="text-xs font-mono text-[#8C857B]">[2025]</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Work 04 -->
+        <article class="group cursor-pointer">
+          <a href="project.html" class="block">
+            <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+              <img 
+                src="assets/img/work-04.webp" 
+                alt="[Tuscany Solitude: Intimate wedding story in Val d'Orcia]" 
+                width="800" 
+                height="1066" 
+                loading="lazy" 
+                class="img-editorial w-full h-full object-cover" 
+              />
+            </div>
+            <div class="pt-4 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-[#8C857B]">[Weddings]</span>
+                <h3 class="font-serif text-2xl text-[#111111] group-hover:text-[#E4572E] transition-colors mt-0.5">
+                  [Villa Medicea]
+                </h3>
+              </div>
+              <span class="text-xs font-mono text-[#8C857B]">[2025]</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Work 05 -->
+        <article class="group cursor-pointer">
+          <a href="project.html" class="block">
+            <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+              <img 
+                src="assets/img/work-05.webp" 
+                alt="[Form & Void: Brutalist architecture exploration]" 
+                width="800" 
+                height="1066" 
+                loading="lazy" 
+                class="img-editorial w-full h-full object-cover" 
+              />
+            </div>
+            <div class="pt-4 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-[#8C857B]">[Travel]</span>
+                <h3 class="font-serif text-2xl text-[#111111] group-hover:text-[#E4572E] transition-colors mt-0.5">
+                  [Kyoto Pavilions]
+                </h3>
+              </div>
+              <span class="text-xs font-mono text-[#8C857B]">[2025]</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Work 06 -->
+        <article class="group cursor-pointer">
+          <a href="project.html" class="block">
+            <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+              <img 
+                src="assets/img/work-06.webp" 
+                alt="[Daphne: Fine art ceramic and bronze still life]" 
+                width="800" 
+                height="1066" 
+                loading="lazy" 
+                class="img-editorial w-full h-full object-cover" 
+              />
+            </div>
+            <div class="pt-4 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-[#8C857B]">[Portraits]</span>
+                <h3 class="font-serif text-2xl text-[#111111] group-hover:text-[#E4572E] transition-colors mt-0.5">
+                  [Elysian Shadows]
+                </h3>
+              </div>
+              <span class="text-xs font-mono text-[#8C857B]">[2024]</span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. SHORT ABOUT STRIP (Editorial quote, bio snippet, portrait preview)
+         ======================================================================== -->
+    <!-- EDIT: Short about strip -->
+    <section class="border-y border-[#E4DFD6] bg-[#F5F3EF] py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="aspect-[4/5] bg-[#E4DFD6] rounded-[4px] overflow-hidden shadow-xs">
+            <img 
+              src="assets/img/portrait.webp" 
+              alt="[Portrait of artist Elena Rostova in her studio]" 
+              width="800" 
+              height="1000" 
+              loading="lazy" 
+              class="w-full h-full object-cover" 
+            />
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-6 lg:pl-8">
+          <span class="text-xs uppercase tracking-widest text-[#E4572E] font-medium block">
+            [The Philosophy]
+          </span>
+          <blockquote class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#111111] leading-tight font-normal">
+            "[Photography is not the recording of light; it is the curation of silence.]"
+          </blockquote>
+          <p class="text-base text-[#8C857B] leading-relaxed max-w-xl">
+            [With ten years working across Paris, Milan, and New York, I collaborate with luxury fashion ateliers, conscious architects, and private patrons seeking honest, enduring visual narratives.]
+          </p>
+          <div class="pt-4 flex items-center gap-6">
+            <a href="about.html" class="btn-primary text-xs uppercase tracking-wider px-6 py-3">
+              Read Artist Biography
+            </a>
+            <a href="portfolio.html" class="accent-link text-xs uppercase tracking-widest font-semibold hover:underline">
+              Explore All Projects →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. SERVICES LIST (3 items with numbers and descriptions)
+         ======================================================================== -->
+    <!-- EDIT: Services list -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-24 sm:py-32">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-[#8C857B] font-medium">
+          Disciplines
+        </span>
+        <h2 class="font-serif text-4xl sm:text-5xl text-[#111111]">
+          Creative Offerings
+        </h2>
+        <p class="text-sm text-[#8C857B]">
+          Structured partnerships tailored for distinct creative milestones.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Service 01 -->
+        <div class="p-8 border border-[#E4DFD6] rounded-[4px] bg-white flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <span class="font-serif text-3xl text-[#E4572E] font-normal">01</span>
+            <h3 class="font-serif text-2xl text-[#111111] font-bold">
+              [Brand & Campaign Direction]
+            </h3>
+            <p class="text-xs sm:text-sm text-[#8C857B] leading-relaxed">
+              [End-to-end visual identity and lookbook production for bespoke apparel, fragrance, and interior brands.]
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E4DFD6] flex justify-between items-center text-xs">
+            <span class="text-[#8C857B]">Starting from</span>
+            <span class="font-serif text-xl font-bold text-[#111111]">[$3,400]</span>
+          </div>
+        </div>
+
+        <!-- Service 02 -->
+        <div class="p-8 border border-[#E4DFD6] rounded-[4px] bg-white flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <span class="font-serif text-3xl text-[#E4572E] font-normal">02</span>
+            <h3 class="font-serif text-2xl text-[#111111] font-bold">
+              [Editorial Portraiture]
+            </h3>
+            <p class="text-xs sm:text-sm text-[#8C857B] leading-relaxed">
+              [Intimate, natural-light sittings for writers, artists, directors, and cultural publications worldwide.]
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E4DFD6] flex justify-between items-center text-xs">
+            <span class="text-[#8C857B]">Starting from</span>
+            <span class="font-serif text-xl font-bold text-[#111111]">[$1,800]</span>
+          </div>
+        </div>
+
+        <!-- Service 03 -->
+        <div class="p-8 border border-[#E4DFD6] rounded-[4px] bg-white flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <span class="font-serif text-3xl text-[#E4572E] font-normal">03</span>
+            <h3 class="font-serif text-2xl text-[#111111] font-bold">
+              [Destination Documentaries]
+            </h3>
+            <p class="text-xs sm:text-sm text-[#8C857B] leading-relaxed">
+              [Multi-day photographic documentation of architectural retreats and bespoke private wedding celebrations.]
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E4DFD6] flex justify-between items-center text-xs">
+            <span class="text-[#8C857B]">Starting from</span>
+            <span class="font-serif text-xl font-bold text-[#111111]">[$5,200]</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="services.html" class="accent-link text-xs uppercase tracking-widest font-semibold hover:underline">
+          View Detailed Package Breakdowns & Inclusions →
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. TESTIMONIALS (2 editorial quotes)
+         ======================================================================== -->
+    <!-- EDIT: Testimonials section -->
+    <section class="border-t border-[#E4DFD6] bg-white py-24">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+        
+        <!-- Quote 1 -->
+        <div class="space-y-4 border-l-2 border-[#E4572E] pl-6">
+          <blockquote class="font-serif text-2xl sm:text-3xl text-[#111111] leading-relaxed italic">
+            "[Elena brought a calm reverence to our campaign that turned a commercial shoot into pure art. Our lookbook received accolades across Vogue Scandinavia.]"
+          </blockquote>
+          <div>
+            <p class="font-medium text-xs text-[#111111] uppercase tracking-wider">[Astrid Lindqvist]</p>
+            <p class="text-[11px] text-[#8C857B]">[Creative Director, Ateliers de Céramique]</p>
+          </div>
+        </div>
+
+        <!-- Quote 2 -->
+        <div class="space-y-4 border-l-2 border-[#E4572E] pl-6">
+          <blockquote class="font-serif text-2xl sm:text-3xl text-[#111111] leading-relaxed italic">
+            "[She captured our wedding in Florence without once making us pose. The images hold the quiet perfume and emotion of the day permanently.]"
+          </blockquote>
+          <div>
+            <p class="font-medium text-xs text-[#111111] uppercase tracking-wider">[Julian & Claire Thorne]</p>
+            <p class="text-[11px] text-[#8C857B]">[Private Patrons, London & Milan]</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. INSTAGRAM-STYLE STRIP (6 small images)
+         ======================================================================== -->
+    <!-- EDIT: Instagram gallery strip -->
+    <section class="border-t border-[#E4DFD6] pt-16 pb-12 bg-[#F5F3EF]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-6 flex justify-between items-end">
+        <span class="text-xs uppercase tracking-widest text-[#8C857B]">
+          Visual Journal / Instagram
+        </span>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="js-brand-instagram accent-link text-xs uppercase tracking-widest font-semibold hover:underline">
+          @elenarostova →
+        </a>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px]">
+          <img src="assets/img/insta-01.webp" alt="[Journal frame 1]" width="400" height="400" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px]">
+          <img src="assets/img/insta-02.webp" alt="[Journal frame 2]" width="400" height="400" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px]">
+          <img src="assets/img/insta-03.webp" alt="[Journal frame 3]" width="400" height="400" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px]">
+          <img src="assets/img/insta-04.webp" alt="[Journal frame 4]" width="400" height="400" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px]">
+          <img src="assets/img/insta-05.webp" alt="[Journal frame 5]" width="400" height="400" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px]">
+          <img src="assets/img/insta-06.webp" alt="[Journal frame 6]" width="400" height="400" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. CONTACT CALL TO ACTION BAND
+         ======================================================================== -->
+    <!-- EDIT: Contact banner -->
+    <section class="border-t border-[#E4DFD6] bg-[#111111] text-[#F5F3EF] py-24 sm:py-32 text-center">
+      <div class="max-w-3xl mx-auto px-6 space-y-6">
+        <span class="text-xs uppercase tracking-[0.25em] text-[#E4572E] font-medium block">
+          Initiate a Dialogue
+        </span>
+        <h2 class="font-serif text-4xl sm:text-6xl text-white font-normal leading-tight">
+          Let’s create something lasting together.
+        </h2>
+        <p class="text-base text-white/70 max-w-lg mx-auto">
+          Currently reviewing private commissions and editorial campaigns for the upcoming calendar season.
+        </p>
+        <div class="pt-4">
+          <a href="contact.html" class="btn-primary text-xs uppercase tracking-widest px-9 py-4 inline-block">
+            Send Studio Inquiry
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-12 text-xs">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="font-serif text-lg text-white font-normal">[Elena Rostova] Studio</p>
+        <p class="text-[11px] mt-1"><span class="js-brand-location">New York & Paris</span> · All rights reserved.</p>
+      </div>
+
+      <div class="flex items-center gap-6 text-[11px] uppercase tracking-wider text-white/80">
+        <a href="portfolio.html" class="hover:text-white">Portfolio</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+
+      <div class="text-[11px]">
+        <span>Built with Folio Template by Sagepage Studio</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

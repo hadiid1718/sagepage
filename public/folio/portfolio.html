@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- EDIT: Title and Meta -->
+  <title>Portfolio & Selected Works · [Elena Rostova]</title>
+  <meta name="description" content="[Explore the curated visual archives of Elena Rostova across Weddings, Portraits, Commercial Brand campaigns, and Travel.]" />
+  <link rel="canonical" href="https://example.com/portfolio.html" />
+
+  <meta property="og:title" content="Portfolio · [Elena Rostova]" />
+  <meta property="og:description" content="[Selected photographic and visual works.]" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-image.webp" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="icon" type="image/webp" href="assets/img/favicon.webp" />
+
+  <!-- Schema.org ImageGallery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Selected Works Portfolio",
+    "author": {
+      "@type": "Person",
+      "name": "[Elena Rostova]"
+    }
+  }
+  </script>
+</head>
+<body class="bg-[#F5F3EF] text-[#111111] antialiased">
+  
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#111111] focus:text-[#F5F3EF] focus:rounded">
+    Skip to content
+  </a>
+
+  <!-- Header -->
+  <header id="folio-header" class="fixed top-0 left-0 right-0 z-40 header-scrolled transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <a href="index.html" class="font-serif text-2xl tracking-wide font-normal hover:opacity-80 transition-opacity">
+        <span class="js-brand-name">[Elena Rostova]</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium" aria-label="Main Navigation">
+        <a href="portfolio.html" class="text-[#E4572E] font-semibold py-1">Portfolio</a>
+        <a href="about.html" class="hover:text-[#E4572E] transition-colors py-1">About</a>
+        <a href="services.html" class="hover:text-[#E4572E] transition-colors py-1">Services</a>
+        <a href="contact.html" class="hover:text-[#E4572E] transition-colors py-1">Contact</a>
+      </nav>
+
+      <div class="hidden md:block">
+        <a href="contact.html" class="btn-primary text-xs uppercase tracking-wider px-5 py-2.5">
+          Inquire
+        </a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="md:hidden p-2 text-inherit focus:outline-none" aria-label="Open menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-[#111111] text-[#F5F3EF] hidden flex-col justify-between p-8" aria-label="Mobile Navigation">
+    <div class="flex justify-between items-center pb-6 border-b border-white/10">
+      <span class="font-serif text-xl">[Elena Rostova]</span>
+      <button id="mobile-menu-close" class="p-2 text-white focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 font-serif text-3xl">
+      <a href="index.html" class="text-white/80 hover:text-white">Home</a>
+      <a href="portfolio.html" class="text-white hover:text-[#E4572E]">Portfolio</a>
+      <a href="project.html" class="text-white/80 hover:text-white">Case Study</a>
+      <a href="about.html" class="text-white/80 hover:text-white">About</a>
+      <a href="services.html" class="text-white/80 hover:text-white">Services</a>
+      <a href="contact.html" class="text-white/80 hover:text-white">Contact</a>
+    </nav>
+    <div class="pt-6 border-t border-white/10 text-xs text-white/60">
+      <p><span class="js-brand-email">studio@elenarostova.com</span></p>
+    </div>
+  </div>
+
+  <main id="main-content" class="pt-32 pb-24 sm:pb-32">
+    <!-- Header Hero -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
+      <div class="max-w-2xl space-y-3">
+        <span class="text-xs uppercase tracking-widest text-[#E4572E] font-medium block">
+          Visual Archives
+        </span>
+        <h1 class="font-serif text-5xl sm:text-6xl text-[#111111] font-normal tracking-tight">
+          Portfolio & Works
+        </h1>
+        <p class="text-base text-[#8C857B] leading-relaxed">
+          A selection of commissioned lookbooks, private portraits, and spatial architecture studies. Click any frame to view in high-resolution lightbox.
+        </p>
+      </div>
+
+      <!-- EDIT: Category filter buttons -->
+      <div class="mt-10 pb-4 border-b border-[#E4DFD6] flex flex-wrap gap-2 sm:gap-6 text-xs uppercase tracking-widest font-medium" role="tablist">
+        <button class="folio-filter-btn pb-2 text-[#111111] border-b-2 border-[#111111] font-semibold transition-all cursor-pointer" data-category="all">
+          All Works
+        </button>
+        <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="weddings">
+          Weddings
+        </button>
+        <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="portraits">
+          Portraits
+        </button>
+        <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="brand">
+          Brand
+        </button>
+        <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="travel">
+          Travel
+        </button>
+      </div>
+    </div>
+
+    <!-- Masonry Gallery -->
+    <!-- EDIT: Gallery items and categories -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Item 01 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="portraits">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-01.webp" 
+              data-full="assets/img/work-01.webp"
+              data-title="[Monolith Series: Ceramic Study]"
+              data-category="Portraits"
+              alt="[Monolith: Ceramic study and architectural shadow]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Monolith: Study I]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          </div>
+        </div>
+
+        <!-- Item 02 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="brand">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-02.webp" 
+              data-full="assets/img/work-02.webp"
+              data-title="[Solis Lookbook: Ateliers de Marseille]"
+              data-category="Brand"
+              alt="[Solis coastal light campaign]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Solis Campaign]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
+          </div>
+        </div>
+
+        <!-- Item 03 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="portraits">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-03.webp" 
+              data-full="assets/img/work-03.webp"
+              data-title="[The Quiet Gesture: High Fashion]"
+              data-category="Portraits"
+              alt="[The Quiet Gesture editorial portrait]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[The Quiet Gesture]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          </div>
+        </div>
+
+        <!-- Item 04 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="weddings">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-04.webp" 
+              data-full="assets/img/work-04.webp"
+              data-title="[Villa Medicea: Intimate Tuscan Wedding]"
+              data-category="Weddings"
+              alt="[Villa Medicea wedding ceremony in Tuscany]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Villa Medicea]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Weddings]</span>
+          </div>
+        </div>
+
+        <!-- Item 05 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="travel">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-05.webp" 
+              data-full="assets/img/work-05.webp"
+              data-title="[Kyoto Pavilions: Spatial Studies]"
+              data-category="Travel"
+              alt="[Kyoto Pavilions spatial study]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Kyoto Pavilions]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Travel]</span>
+          </div>
+        </div>
+
+        <!-- Item 06 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="portraits">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-06.webp" 
+              data-full="assets/img/work-06.webp"
+              data-title="[Elysian Shadows: Bronze & Skin]"
+              data-category="Portraits"
+              alt="[Elysian Shadows portrait sitting]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Elysian Shadows]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          </div>
+        </div>
+
+        <!-- Item 07 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="weddings">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-07.webp" 
+              data-full="assets/img/work-07.webp"
+              data-title="[Amalfi Coast: Midnight Reverie]"
+              data-category="Weddings"
+              alt="[Amalfi Coast wedding celebration]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Ravello Evening]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Weddings]</span>
+          </div>
+        </div>
+
+        <!-- Item 08 -->
+        <div class="folio-gallery-item group cursor-pointer" data-category="brand">
+          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
+            <img 
+              src="assets/img/work-08.webp" 
+              data-full="assets/img/work-08.webp"
+              data-title="[Maison Lin: Textile Textures]"
+              data-category="Brand"
+              alt="[Maison Lin organic linen textures]" 
+              width="800" 
+              height="1066" 
+              loading="lazy" 
+              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
+            />
+          </div>
+          <div class="pt-3 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Maison Lin]</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       LIGHTBOX COMPONENT (Next, Previous, Close, Keyboard Arrows, Escape)
+       ======================================================================== -->
+  <div id="folio-lightbox" class="fixed inset-0 z-50 bg-[#111111]/95 hidden items-center justify-center p-4 sm:p-10" role="dialog" aria-modal="true" aria-label="Image Lightbox Viewer">
+    
+    <!-- Close Button -->
+    <button id="lightbox-close" class="absolute top-6 right-6 p-3 text-white/80 hover:text-white transition-colors focus:outline-none" aria-label="Close Lightbox (Escape)">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Previous Button -->
+    <button id="lightbox-prev" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 text-white/80 hover:text-white transition-colors focus:outline-none" aria-label="Previous Image (Left Arrow)">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+      </svg>
+    </button>
+
+    <!-- Next Button -->
+    <button id="lightbox-next" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 text-white/80 hover:text-white transition-colors focus:outline-none" aria-label="Next Image (Right Arrow)">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+      </svg>
+    </button>
+
+    <!-- Active Image Container -->
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Enlarged view" class="lightbox-content max-w-full max-h-[75vh] object-contain rounded-[2px]" />
+      <div class="mt-4 text-center text-white/90">
+        <p id="lightbox-caption" class="text-sm"></p>
+        <p id="lightbox-counter" class="text-[11px] font-mono text-white/50 mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-12 text-xs">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <p class="font-serif text-lg text-white">[Elena Rostova] Studio</p>
+      <div class="flex items-center gap-6 text-[11px] uppercase tracking-wider text-white/80">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="text-white">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="text-[11px]">Built with Folio Template</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
