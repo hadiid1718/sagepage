@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   
   <!-- EDIT: About title and meta -->
   <title>About · Biography & Approach · [Elena Rostova]</title>
-  <meta name="description" content="[Biography, client history, creative process, and exhibitions of artist Elena Rostova.]" />
+  <meta name="description" content="[Biography, client history, studio mosaic, and creative process of artist Elena Rostova.]" />
   <link rel="canonical" href="https://example.com/about.html" />
+
+  <meta property="og:title" content="About · [Elena Rostova]" />
+  <meta property="og:description" content="[Biography, client history, studio mosaic, and creative process.]" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="assets/img/about-main.webp" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/theme.css" />
@@ -77,151 +82,203 @@
     </nav>
   </div>
 
-  <main id="main-content" class="pt-32 pb-24 sm:pb-32 space-y-24">
+  <main id="main-content" class="pt-28 pb-16 lg:pb-24 space-y-12 lg:space-y-16">
     
-    <!-- Hero / Story Section -->
-    <!-- EDIT: Biography text and portrait -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <!-- 1. Full-Height Environmental Portrait & Story -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      
+      <!-- Full-Height Portrait -->
       <div class="lg:col-span-5">
-        <div class="aspect-[3/4] bg-[#E4DFD6] rounded-[4px] overflow-hidden sticky top-28 shadow-sm">
+        <div class="aspect-[3/4] bg-[#E4DFD6] rounded-[4px] overflow-hidden sticky top-28 shadow-sm cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/about-main.webp" data-title="[Elena Rostova · Studio Portrait]" data-category="Bio">
           <img 
-            src="assets/img/portrait.webp" 
-            alt="[Elena Rostova portrait in her Brooklyn studio]" 
-            width="800" 
-            height="1066" 
-            class="w-full h-full object-cover" 
+            src="assets/img/about-main.webp" 
+            alt="[Elena Rostova environmental portrait in Brooklyn studio]" 
+            width="900" 
+            height="1200" 
+            class="w-full h-full object-cover img-zoom-target" 
           />
+          <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white text-xs bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">View Full Portrait</span>
+          </div>
         </div>
-        <p class="text-[11px] text-[#8C857B] mt-2 italic">[Elena Rostova · Studio sitting in Brooklyn, October 2026.]</p>
+        <p class="text-[11px] text-[#8C857B] mt-2 italic">[Elena Rostova · Brooklyn studio sitting in north-facing morning daylight.]</p>
       </div>
 
-      <div class="lg:col-span-7 space-y-8">
+      <!-- Story & Credentials -->
+      <div class="lg:col-span-7 space-y-6">
         <div>
           <span class="text-xs uppercase tracking-widest text-[#E4572E] font-medium block mb-2">
-            [The Artist]
+            The Background
           </span>
-          <h1 class="font-serif text-5xl sm:text-6xl text-[#111111] leading-tight font-normal">
-            [Elena Rostova]
+          <h1 class="font-serif text-3xl sm:text-5xl text-[#111111] leading-tight font-normal">
+            "I photograph to slow down time until it becomes palpable."
           </h1>
-          <p class="text-base text-[#8C857B] mt-1 font-serif italic text-xl">
-            [Visual Artist & Editorial Photographer based between New York and Paris.]
-          </p>
         </div>
 
-        <div class="space-y-6 text-base sm:text-lg text-[#111111]/85 leading-relaxed">
+        <div class="space-y-4 text-sm sm:text-base text-[#8C857B] leading-relaxed">
           <p>
-            [Born in Saint Petersburg and educated at the École des Beaux-Arts in Paris, my artistic foundation began in classical monochrome printmaking. This background informs my photographic sensibility: an obsession with textural grain, tonal restraint, and the tactile relationship between human bodies and raw architectural materials.]
+            [Born in Saint Petersburg and trained in Paris, Elena Rostova has spent the past decade crafting an editorial visual language defined by restrained geometry, soft film halation, and natural light. Her work sits between fine art documentary and luxury commercial commissions.]
           </p>
           <p>
-            [Over the past decade, my studio has produced campaigns and visual identities for independent fashion houses, ceramic sculptors, and architectural publications. My work seeks to strip away commercial hyperbole, creating space for stillness, natural sunlight, and unspoken tension.]
-          </p>
-          <p>
-            [When not on commercial commission, I travel extensively with medium format analog cameras documenting heritage architecture across Japan, Southern Italy, and the Nordic coastlines.]
+            [Working primarily with Hasselblad 500C/M and Contax 645 medium format cameras, she approaches every project without forced posing or synthetic strobes. Her archives reflect a devotion to organic textures: coarse linen, wet limestone, patinated bronze, and unadorned skin.]
           </p>
         </div>
 
-        <!-- Download CV / Press Button -->
-        <div class="pt-4 flex flex-wrap items-center gap-4 border-t border-[#E4DFD6]">
-          <a href="#clients" class="btn-primary text-xs uppercase tracking-widest px-7 py-3.5">
-            Download Artist CV (PDF)
-          </a>
-          <a href="contact.html" class="btn-secondary text-xs uppercase tracking-widest px-7 py-3.5">
-            Inquire for Commission
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Awards / Client List -->
-    <!-- EDIT: Clients and awards list -->
-    <section id="clients" class="max-w-7xl mx-auto px-6 lg:px-12 pt-12 border-t border-[#E4DFD6]">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <div class="md:col-span-4">
-          <span class="text-xs uppercase tracking-widest text-[#8C857B] block mb-1">Select Recognition</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-[#111111]">
-            Clients & Honors
-          </h2>
-        </div>
-
-        <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs">
-          <!-- Client Roster -->
-          <div class="space-y-4">
-            <h3 class="font-serif font-bold text-lg text-[#111111] pb-2 border-b border-[#E4DFD6]">
+        <!-- Clients & Exhibitions Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[#E4DFD6]">
+          <!-- Clients -->
+          <div class="space-y-3">
+            <h3 class="font-serif font-bold text-base text-[#111111] pb-1.5 border-b border-[#E4DFD6]">
               [Editorial & Commercial Clients]
             </h3>
-            <ul class="space-y-2 text-[#8C857B] text-sm">
-              <li class="flex justify-between"><span>[Kinfolk Magazine]</span> <span class="font-mono text-xs">2024–26</span></li>
-              <li class="flex justify-between"><span>[Vogue Scandinavia]</span> <span class="font-mono text-xs">2025</span></li>
-              <li class="flex justify-between"><span>[Cereal City Guides]</span> <span class="font-mono text-xs">2024</span></li>
-              <li class="flex justify-between"><span>[Maison Margiela Fragrance]</span> <span class="font-mono text-xs">2023</span></li>
-              <li class="flex justify-between"><span>[Arper Furniture Italy]</span> <span class="font-mono text-xs">2023</span></li>
-              <li class="flex justify-between"><span>[Atelier de Céramique]</span> <span class="font-mono text-xs">2022</span></li>
+            <ul class="space-y-1.5 text-[#8C857B] text-xs">
+              <li class="flex justify-between"><span>[Kinfolk Magazine]</span> <span class="font-mono text-[11px]">2024–26</span></li>
+              <li class="flex justify-between"><span>[Vogue Scandinavia]</span> <span class="font-mono text-[11px]">2025</span></li>
+              <li class="flex justify-between"><span>[Cereal City Guides]</span> <span class="font-mono text-[11px]">2024</span></li>
+              <li class="flex justify-between"><span>[Maison Margiela Fragrance]</span> <span class="font-mono text-[11px]">2023</span></li>
+              <li class="flex justify-between"><span>[Arper Furniture Italy]</span> <span class="font-mono text-[11px]">2023</span></li>
+              <li class="flex justify-between"><span>[Atelier de Céramique]</span> <span class="font-mono text-[11px]">2022</span></li>
             </ul>
           </div>
 
-          <!-- Awards & Exhibitions -->
-          <div class="space-y-4">
-            <h3 class="font-serif font-bold text-lg text-[#111111] pb-2 border-b border-[#E4DFD6]">
+          <!-- Awards -->
+          <div class="space-y-3">
+            <h3 class="font-serif font-bold text-base text-[#111111] pb-1.5 border-b border-[#E4DFD6]">
               [Exhibitions & Awards]
             </h3>
-            <ul class="space-y-2 text-[#8C857B] text-sm">
-              <li class="flex justify-between"><span>[Paris Photo Prize: Silver]</span> <span class="font-mono text-xs">2025</span></li>
-              <li class="flex justify-between"><span>[Solo Show: Galerie Blanc, Marais]</span> <span class="font-mono text-xs">2024</span></li>
-              <li class="flex justify-between"><span>[International Photography Awards]</span> <span class="font-mono text-xs">2023</span></li>
-              <li class="flex justify-between"><span>[Arles Open Salon Selection]</span> <span class="font-mono text-xs">2022</span></li>
+            <ul class="space-y-1.5 text-[#8C857B] text-xs">
+              <li class="flex justify-between"><span>[Paris Photo Prize: Silver]</span> <span class="font-mono text-[11px]">2025</span></li>
+              <li class="flex justify-between"><span>[Solo Show: Galerie Blanc, Marais]</span> <span class="font-mono text-[11px]">2024</span></li>
+              <li class="flex justify-between"><span>[International Photography Awards]</span> <span class="font-mono text-[11px]">2023</span></li>
+              <li class="flex justify-between"><span>[Arles Open Salon Selection]</span> <span class="font-mono text-[11px]">2022</span></li>
             </ul>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="assets/img/about-main.webp" download class="btn-secondary text-xs uppercase tracking-wider px-6 py-3 inline-block">
+            Download Artist CV (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Studio Image Mosaic (4 Different Images, No Dead Space) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-4">
+      <div class="mb-4 flex justify-between items-baseline">
+        <h2 class="font-serif text-2xl sm:text-3xl text-[#111111]">
+          Atelier & Darkroom Mosaic
+        </h2>
+        <span class="text-xs uppercase tracking-widest text-[#8C857B]">Brooklyn Studio Practice</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div class="aspect-[4/3] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/studio-01.webp" data-title="[Studio Overview with Skylight]" data-category="Studio">
+          <img src="assets/img/studio-01.webp" alt="[Studio overview with skylight and drafting table]" width="800" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-[10px] text-white uppercase tracking-wider font-mono">Overview</span>
+          </div>
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/studio-02.webp" data-title="[Vintage Medium Format Cameras]" data-category="Studio">
+          <img src="assets/img/studio-02.webp" alt="[Medium format camera bodies on open shelf]" width="600" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-[10px] text-white uppercase tracking-wider font-mono">Gear</span>
+          </div>
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/studio-03.webp" data-title="[Darkroom Print Tray Bath]" data-category="Studio">
+          <img src="assets/img/studio-03.webp" alt="[Darkroom print development tray and tongs]" width="600" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-[10px] text-white uppercase tracking-wider font-mono">Darkroom</span>
+          </div>
+        </div>
+        <div class="aspect-[4/3] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/studio-04.webp" data-title="[Monograph Library & Ceramics]" data-category="Studio">
+          <img src="assets/img/studio-04.webp" alt="[Bookshelf of monograph art books and ceramics]" width="800" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-[10px] text-white uppercase tracking-wider font-mono">Library</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Creative Process in 4 Steps -->
-    <!-- EDIT: 4-step creative process -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 border-t border-[#E4DFD6]">
-      <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+    <!-- 3. Creative Process in 4 Steps (Each with its Own Image) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-10 border-t border-[#E4DFD6]">
+      <div class="text-center max-w-xl mx-auto mb-8 space-y-1">
         <span class="text-xs uppercase tracking-widest text-[#E4572E] font-medium block">
           Methodology
         </span>
-        <h2 class="font-serif text-4xl text-[#111111]">
-          The Creative Process
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#111111]">
+          The Four-Stage Process
         </h2>
         <p class="text-xs text-[#8C857B]">
-          A disciplined, collaborative roadmap from discovery to delivery.
+          A disciplined, collaborative roadmap from discovery to archival delivery.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 bg-white border border-[#E4DFD6] rounded-[4px] space-y-3">
-          <span class="font-serif text-3xl text-[#E4572E]">01</span>
-          <h3 class="font-serif text-xl font-bold text-[#111111]">[Discovery & Concept]</h3>
-          <p class="text-xs text-[#8C857B] leading-relaxed">
-            [We establish the emotional core, architectural palette, lighting reference, and narrative storyboard for your project.]
-          </p>
+        <!-- Step 1 -->
+        <div class="bg-white border border-[#E4DFD6] rounded-[4px] overflow-hidden group shadow-xs">
+          <div class="aspect-[4/3] bg-[#E4DFD6] overflow-hidden relative cursor-pointer js-lightbox-trigger"
+               data-full="assets/img/process-01.webp" data-title="[Stage 01: Concept & Tonal Swatches]" data-category="Process">
+            <img src="assets/img/process-01.webp" alt="[Stage 1: Moodboard curation and color swatches]" width="700" height="525" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          </div>
+          <div class="p-5 space-y-2">
+            <span class="font-serif text-2xl text-[#E4572E]">01</span>
+            <h3 class="font-serif text-lg font-bold text-[#111111]">[Discovery & Concept]</h3>
+            <p class="text-xs text-[#8C857B] leading-relaxed">
+              [We establish the emotional core, architectural palette, lighting reference, and narrative storyboard for your project.]
+            </p>
+          </div>
         </div>
 
-        <div class="p-6 bg-white border border-[#E4DFD6] rounded-[4px] space-y-3">
-          <span class="font-serif text-3xl text-[#E4572E]">02</span>
-          <h3 class="font-serif text-xl font-bold text-[#111111]">[Art Direction]</h3>
-          <p class="text-xs text-[#8C857B] leading-relaxed">
-            [Casting, location scouting, styling coordination, and daylight timing calculations are locked into a production call sheet.]
-          </p>
+        <!-- Step 2 -->
+        <div class="bg-white border border-[#E4DFD6] rounded-[4px] overflow-hidden group shadow-xs">
+          <div class="aspect-[4/3] bg-[#E4DFD6] overflow-hidden relative cursor-pointer js-lightbox-trigger"
+               data-full="assets/img/process-02.webp" data-title="[Stage 02: Location & Lighting Map]" data-category="Process">
+            <img src="assets/img/process-02.webp" alt="[Stage 2: Location scouting notes and daylight schedule]" width="700" height="525" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          </div>
+          <div class="p-5 space-y-2">
+            <span class="font-serif text-2xl text-[#E4572E]">02</span>
+            <h3 class="font-serif text-lg font-bold text-[#111111]">[Art Direction]</h3>
+            <p class="text-xs text-[#8C857B] leading-relaxed">
+              [Casting, location scouting, styling coordination, and daylight timing calculations are locked into a production call sheet.]
+            </p>
+          </div>
         </div>
 
-        <div class="p-6 bg-white border border-[#E4DFD6] rounded-[4px] space-y-3">
-          <span class="font-serif text-3xl text-[#E4572E]">03</span>
-          <h3 class="font-serif text-xl font-bold text-[#111111]">[The Session]</h3>
-          <p class="text-xs text-[#8C857B] leading-relaxed">
-            [Calm, focused on-site execution with both digital and medium format analog cameras to capture honest, unforced moments.]
-          </p>
+        <!-- Step 3 -->
+        <div class="bg-white border border-[#E4DFD6] rounded-[4px] overflow-hidden group shadow-xs">
+          <div class="aspect-[4/3] bg-[#E4DFD6] overflow-hidden relative cursor-pointer js-lightbox-trigger"
+               data-full="assets/img/process-03.webp" data-title="[Stage 03: Analog Capture Session]" data-category="Process">
+            <img src="assets/img/process-03.webp" alt="[Stage 3: On-set analog medium format camera execution]" width="700" height="525" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          </div>
+          <div class="p-5 space-y-2">
+            <span class="font-serif text-2xl text-[#E4572E]">03</span>
+            <h3 class="font-serif text-lg font-bold text-[#111111]">[The Session]</h3>
+            <p class="text-xs text-[#8C857B] leading-relaxed">
+              [Calm, focused on-site execution with both digital and medium format analog cameras to capture honest, unforced moments.]
+            </p>
+          </div>
         </div>
 
-        <div class="p-6 bg-white border border-[#E4DFD6] rounded-[4px] space-y-3">
-          <span class="font-serif text-3xl text-[#E4572E]">04</span>
-          <h3 class="font-serif text-xl font-bold text-[#111111]">[Curation & Retouch]</h3>
-          <p class="text-xs text-[#8C857B] leading-relaxed">
-            [Deliberate editing, color grading matching our signature film tones, high-resolution delivery, and archivist-grade file masters.]
-          </p>
+        <!-- Step 4 -->
+        <div class="bg-white border border-[#E4DFD6] rounded-[4px] overflow-hidden group shadow-xs">
+          <div class="aspect-[4/3] bg-[#E4DFD6] overflow-hidden relative cursor-pointer js-lightbox-trigger"
+               data-full="assets/img/process-04.webp" data-title="[Stage 04: Curation & Print Mastering]" data-category="Process">
+            <img src="assets/img/process-04.webp" alt="[Stage 4: Contact sheet review and archival print mastering]" width="700" height="525" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          </div>
+          <div class="p-5 space-y-2">
+            <span class="font-serif text-2xl text-[#E4572E]">04</span>
+            <h3 class="font-serif text-lg font-bold text-[#111111]">[Curation & Retouch]</h3>
+            <p class="text-xs text-[#8C857B] leading-relaxed">
+              [Deliberate editing, color grading matching our signature film tones, high-resolution delivery, and archivist-grade file masters.]
+            </p>
+          </div>
         </div>
 
       </div>
@@ -229,7 +286,37 @@
 
   </main>
 
-  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-12 text-xs">
+  <!-- ========================================================================
+       GLOBAL FOOTER THIN IMAGE STRIP (6 images above footer text)
+       ======================================================================== -->
+  <div class="w-full grid grid-cols-3 sm:grid-cols-6 gap-0 border-t border-white/10 bg-[#111111]">
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-01.webp" data-title="[Architectural Staircase Rake]" data-category="Archive">
+      <img src="assets/img/footer-01.webp" alt="[Curved staircase and raking light]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-02.webp" data-title="[Overcoat Portrait Posture]" data-category="Archive">
+      <img src="assets/img/footer-02.webp" alt="[Monochrome portrait detail in overcoat]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-03.webp" data-title="[Terracotta Shaping on Wheel]" data-category="Archive">
+      <img src="assets/img/footer-03.webp" alt="[Hands working terracotta clay on wheel]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-04.webp" data-title="[Alpine Ridge Mist]" data-category="Archive">
+      <img src="assets/img/footer-04.webp" alt="[Fog rolling over alpine pine ridges]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-05.webp" data-title="[Tuscan Field Couple Walk]" data-category="Archive">
+      <img src="assets/img/footer-05.webp" alt="[Intimate couple silhouette across Tuscan field]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-06.webp" data-title="[Still Life Ceramic on Travertine]" data-category="Archive">
+      <img src="assets/img/footer-06.webp" alt="[Still life ceramic cup on travertine block]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+  </div>
+
+  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-10 text-xs">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
       <p class="font-serif text-lg text-white">[Elena Rostova] Studio</p>
       <div class="flex items-center gap-6 text-[11px] uppercase tracking-wider text-white/80">
@@ -242,6 +329,42 @@
       <p class="text-[11px]">Built with Folio Template</p>
     </div>
   </footer>
+
+  <!-- ========================================================================
+       FOLIO LIGHTBOX (PhotoSwipe-inspired responsive fullscreen viewer)
+       ======================================================================== -->
+  <div id="folio-lightbox" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox Viewer">
+    <div class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 sm:p-6 bg-gradient-to-b from-black/80 via-black/40 to-transparent">
+      <div class="flex items-center gap-3 text-white/90">
+        <span id="lightbox-counter" class="text-xs font-mono tracking-widest text-white/70 bg-white/10 px-3 py-1 rounded-full border border-white/10">1 / 1</span>
+        <span id="lightbox-badge" class="hidden sm:inline-block text-[10px] uppercase tracking-widest text-[#E4572E] font-medium bg-[#E4572E]/15 border border-[#E4572E]/30 px-2.5 py-0.5 rounded-full"></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="lightbox-zoom" class="lightbox-btn" aria-label="Toggle zoom" title="Toggle zoom">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"></path></svg>
+        </button>
+        <button id="lightbox-fs" class="lightbox-btn hidden sm:inline-flex" aria-label="Toggle fullscreen" title="Fullscreen (F)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"></path></svg>
+        </button>
+        <button id="lightbox-close" class="lightbox-btn" aria-label="Close Lightbox (Escape)" title="Close (Esc)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+    </div>
+    <button id="lightbox-prev" class="lightbox-btn lightbox-nav-btn" aria-label="Previous image" title="Previous (←)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
+    </button>
+    <button id="lightbox-next" class="lightbox-btn lightbox-nav-btn" aria-label="Next image" title="Next (→)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
+    </button>
+    <div class="lightbox-img-wrapper">
+      <img id="lightbox-img" src="" alt="Enlarged view" />
+      <div class="mt-4 text-center max-w-xl px-4">
+        <h3 id="lightbox-caption" class="font-serif text-lg sm:text-xl text-white font-normal"></h3>
+        <p id="lightbox-desc" class="text-xs text-white/60 mt-1 font-light"></p>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js"></script>

@@ -20,6 +20,8 @@ html {
   -webkit-text-size-adjust: 100%;
   tab-size: 4;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -28,6 +30,53 @@ body {
   background-color: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility Skip Link (Fixes overlapping 'skip to content') */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+}
+
+.not-sr-only, .focus\:not-sr-only:focus {
+  position: fixed !important;
+  top: 1rem !important;
+  left: 1rem !important;
+  z-index: 50 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  background-color: var(--color-ink, #111111) !important;
+  color: var(--color-bg, #F5F3EF) !important;
+  border-radius: 4px !important;
+}
+
+/* Sticky Header States */
+.header-scrolled {
+  background-color: rgba(245, 243, 239, 0.96) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-light-line, #E4DFD6) !important;
+  color: var(--color-ink, #111111) !important;
+}
+
+.header-transparent {
+  background-color: transparent !important;
+  border-bottom: 1px solid transparent !important;
 }
 
 hr {
@@ -193,13 +242,67 @@ img, video {
 .mb-16 { margin-bottom: 4rem; }
 
 /* Aspect Ratios */
-.aspect-square { aspect-ratio: 1 / 1; }
-.aspect-portrait { aspect-ratio: 3 / 4; }
-.aspect-photo { aspect-ratio: 4 / 5; }
-.aspect-landscape { aspect-ratio: 16 / 10; }
-.aspect-cinema { aspect-ratio: 16 / 9; }
+.aspect-square, .aspect-\[1\/1\] { aspect-ratio: 1 / 1; }
+.aspect-portrait, .aspect-\[3\/4\] { aspect-ratio: 3 / 4; }
+.aspect-photo, .aspect-\[4\/5\] { aspect-ratio: 4 / 5; }
+.aspect-landscape, .aspect-\[16\/10\] { aspect-ratio: 16 / 10; }
+.aspect-cinema, .aspect-video, .aspect-\[16\/9\] { aspect-ratio: 16 / 9; }
+.aspect-\[2\/3\] { aspect-ratio: 2 / 3; }
+.aspect-\[3\/2\] { aspect-ratio: 3 / 2; }
 .object-cover { object-fit: cover; }
 .object-center { object-position: center; }
+
+/* Multi-Column Masonry (Balanced columns, no vertical or horizontal empty gaps) */
+.columns-1 { column-count: 1; }
+.columns-2 { column-count: 2; }
+.columns-3 { column-count: 3; }
+.columns-4 { column-count: 4; }
+
+@media (min-width: 640px) {
+  .sm\:columns-1 { column-count: 1; }
+  .sm\:columns-2 { column-count: 2; }
+  .sm\:columns-3 { column-count: 3; }
+}
+
+@media (min-width: 768px) {
+  .md\:columns-2 { column-count: 2; }
+  .md\:columns-3 { column-count: 3; }
+  .md\:columns-4 { column-count: 4; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:columns-3 { column-count: 3; }
+  .lg\:columns-4 { column-count: 4; }
+  .lg\:columns-5 { column-count: 5; }
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+[column-fill\:_balance] {
+  column-fill: balance;
+  -webkit-column-fill: balance;
+}
+
+/* Custom rounded utilities */
+.rounded-\[4px\] { border-radius: 4px; }
+.rounded-\[8px\] { border-radius: 8px; }
+.rounded-\[12px\] { border-radius: 12px; }
+
+/* Arbitrary color utilities */
+.bg-\[\#F5F3EF\] { background-color: #F5F3EF; }
+.bg-\[\#111111\] { background-color: #111111; }
+.bg-\[\#E4DFD6\] { background-color: #E4DFD6; }
+.bg-\[\#8C857B\] { background-color: #8C857B; }
+.bg-\[\#E4572E\] { background-color: #E4572E; }
+.text-\[\#111111\] { color: #111111; }
+.text-\[\#8C857B\] { color: #8C857B; }
+.text-\[\#E4572E\] { color: #E4572E; }
+.text-\[\#F5F3EF\] { color: #F5F3EF; }
+.border-\[\#E4DFD6\] { border-color: #E4DFD6; }
+.border-\[\#111111\] { border-color: #111111; }
 
 /* Colors & Borders */
 .bg-bg { background-color: var(--color-bg); }
@@ -296,12 +399,56 @@ img, video {
 .duration-500 { transition-duration: 500ms; }
 .ease-out { transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
 
-.hover\:scale-105:hover { transform: scale(1.05); }
-.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+.hover\:scale-105:hover { transform: scale(1.03); }
+.group:hover .group-hover\:scale-105 { transform: scale(1.03); }
 .hover\:opacity-80:hover { opacity: 0.8; }
 .hover\:text-coral:hover { color: var(--color-coral); }
 .hover\:bg-coral:hover { background-color: var(--color-coral); }
 .hover\:border-coral:hover { border-color: var(--color-coral); }
+
+/* Editorial Hover Zoom (Subtle 1.03, only on devices with pointer/hover) */
+@media (hover: hover) {
+  .img-zoom-target {
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+  .group:hover .img-zoom-target,
+  .img-zoom-target:hover {
+    transform: scale(1.03);
+  }
+}
+
+/* Dense Grid Mosaic (No holes or dead space) */
+.mosaic-dense {
+  grid-auto-flow: dense;
+}
+
+/* Horizontal Swipe Strip for mobile */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+.hide-scrollbar > * {
+  scroll-snap-align: start;
+}
+
+/* Respect Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .group:hover .img-zoom-target,
+  .img-zoom-target:hover {
+    transform: none !important;
+  }
+}
 
 .translate-x-full { transform: translateX(100%); }
 .translate-x-0 { transform: translateX(0); }
@@ -369,8 +516,120 @@ img, video {
   color: #FFFFFF;
 }
 
-/* Lightbox overlay styling */
+/* ==========================================================================
+   LIGHTBOX OVERLAY STYLING (PhotoSwipe-inspired responsive viewer)
+   ========================================================================== */
 #folio-lightbox {
-  background: rgba(17, 17, 17, 0.95);
-  backdrop-filter: blur(8px);
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(17, 17, 17, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s ease;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
+
+#folio-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+#folio-lightbox .lightbox-img-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 92vw;
+  max-height: 86vh;
+  margin: auto;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#folio-lightbox.active .lightbox-img-wrapper {
+  transform: scale(1);
+}
+
+#folio-lightbox:not(.active) .lightbox-img-wrapper {
+  transform: scale(0.96);
+}
+
+#folio-lightbox img#lightbox-img {
+  max-width: 88vw;
+  max-height: 72vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+  cursor: zoom-in;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#folio-lightbox .lightbox-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F5F3EF;
+  border-radius: 9999px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+#folio-lightbox .lightbox-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+#folio-lightbox .lightbox-btn:focus-visible {
+  outline: 2px solid var(--color-coral);
+  outline-offset: 2px;
+}
+
+#folio-lightbox .lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+#folio-lightbox #lightbox-prev {
+  left: 1.5rem;
+}
+
+#folio-lightbox #lightbox-next {
+  right: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  #folio-lightbox #lightbox-prev {
+    left: 0.5rem;
+    width: 38px;
+    height: 38px;
+  }
+  #folio-lightbox #lightbox-next {
+    right: 0.5rem;
+    width: 38px;
+    height: 38px;
+  }
+  #folio-lightbox img#lightbox-img {
+    max-height: 65vh;
+    max-width: 92vw;
+  }
+}
+

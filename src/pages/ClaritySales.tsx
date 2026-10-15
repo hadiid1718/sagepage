@@ -34,7 +34,7 @@ export const ClaritySales: React.FC<ClaritySalesProps> = ({ navigate, onOpenChec
   const salesFaqs = FAQ_ITEMS.slice(0, 6);
 
   return (
-    <div className="space-y-24 sm:space-y-32 pb-24">
+    <div className="space-y-16 sm:space-y-24 lg:space-y-32 pb-36 sm:pb-40">
       {/* 1. HERO */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16">
         <div className="text-center max-w-3xl mx-auto space-y-6">
@@ -756,8 +756,8 @@ export const ClaritySales: React.FC<ClaritySalesProps> = ({ navigate, onOpenChec
         </div>
       </section>
 
-      {/* 10. STICKY MOBILE BUY BUTTON */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-t border-[#E9E4D8] p-3 shadow-lg flex items-center justify-between">
+      {/* 10. STICKY MOBILE BUY BAR (with safe area support & no overlap) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-t border-[#E9E4D8] px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom,0px))] shadow-lg flex items-center justify-between">
         <div>
           <span className="font-serif font-bold text-sm text-[#344E41]">Clarity Template</span>
           <div className="flex items-center gap-1.5 text-xs text-[#2B2B2B]/70">
@@ -767,7 +767,7 @@ export const ClaritySales: React.FC<ClaritySalesProps> = ({ navigate, onOpenChec
         </div>
         <button
           onClick={() => onOpenCheckout('standard')}
-          className="px-5 py-2.5 rounded-full bg-[#344E41] text-white text-xs font-semibold shadow-xs flex items-center gap-1 min-h-[44px]"
+          className="px-5 py-2.5 rounded-full bg-[#344E41] text-white text-xs font-semibold shadow-xs flex items-center gap-1 min-h-[44px] touch-target active:scale-95"
         >
           <span>Get Clarity ($59)</span>
           <ArrowRight className="w-3.5 h-3.5" />

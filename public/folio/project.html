@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   
   <!-- EDIT: Case study title and meta -->
   <title>Kinfolk XIV: The Art of Stillness · Case Study · [Elena Rostova]</title>
@@ -11,7 +11,7 @@
   <meta property="og:title" content="Kinfolk XIV · [Elena Rostova]" />
   <meta property="og:description" content="[Selected editorial case study.]" />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="assets/img/case-hero.webp" />
+  <meta property="og:image" content="assets/img/project-hero.webp" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/theme.css" />
@@ -70,10 +70,10 @@
     </nav>
   </div>
 
-  <main id="main-content" class="pt-32 pb-24 sm:pb-32 space-y-16 lg:space-y-24">
+  <main id="main-content" class="pt-28 pb-16 lg:pb-24 space-y-12 lg:space-y-16">
     
-    <!-- EDIT: Project title & metadata strip -->
-    <section class="max-w-5xl mx-auto px-6 lg:px-12 space-y-8">
+    <!-- Project Title & Metadata Strip -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 space-y-6">
       <a href="portfolio.html" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#8C857B] hover:text-[#111111] transition-colors">
         ← Back to Portfolio
       </a>
@@ -82,13 +82,13 @@
         <span class="text-xs uppercase tracking-widest text-[#E4572E] font-medium block mb-2">
           [Case Study · Editorial Commission]
         </span>
-        <h1 class="font-serif text-4xl sm:text-6xl text-[#111111] leading-tight font-normal">
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#111111] leading-tight font-normal">
           [Kinfolk Volume XIV: The Art of Stillness]
         </h1>
       </div>
 
-      <!-- Metadata Strip (Client, Year, Role, Services) -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-6 border-y border-[#E4DFD6] text-xs">
+      <!-- Metadata Strip (Client, Year, Role, Discipline) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 py-5 border-y border-[#E4DFD6] text-xs">
         <div>
           <span class="text-[#8C857B] uppercase tracking-wider block text-[10px]">Client</span>
           <p class="font-serif text-base text-[#111111] mt-0.5 font-bold">[Kinfolk Magazine]</p>
@@ -110,50 +110,58 @@
       <!-- Project Narrative Intro -->
       <div class="max-w-3xl space-y-4 text-base sm:text-lg text-[#8C857B] leading-relaxed">
         <p>
-          [Commissioned over a four-day residency on the island of Gotland, this series explores how domestic silence reflects architectural minimalism. Working strictly with morning autumn fog and unfiltered northern light, our objective was to capture ceramic forms as solitary figures within vast negative space.]
+          [Commissioned over a four-day residency on the island of Gotland, this series explores how domestic silence reflects architectural minimalism. Working strictly with morning autumn fog and unfiltered northern daylight, our objective was to capture ceramic forms as solitary figures within vast negative space.]
         </p>
       </div>
     </section>
 
-    <!-- Full-Width Hero Image -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="aspect-[16/9] bg-[#E4DFD6] rounded-[4px] overflow-hidden shadow-xs">
+    <!-- 1. Full-Width Hero Image (Spread) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="aspect-[16/9] bg-[#E4DFD6] rounded-[4px] overflow-hidden shadow-xs cursor-pointer group relative js-lightbox-trigger"
+           data-full="assets/img/project-hero.webp" data-title="[Plate 01: Kinfolk XIV Main Spread]" data-category="Spread" data-desc="Morning raking light over polished Gotland limestone table.">
         <img 
-          src="assets/img/case-hero.webp" 
+          src="assets/img/project-hero.webp" 
           alt="[Kinfolk XIV main spread: Ceramic vessels on limestone table]" 
           width="1600" 
           height="900" 
-          class="w-full h-full object-cover" 
+          class="w-full h-full object-cover img-zoom-target" 
         />
+        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 text-[#111111] text-[11px] uppercase tracking-wider font-medium shadow-md">
+            View Fullscreen
+          </span>
+        </div>
       </div>
       <p class="text-[11px] text-[#8C857B] mt-2 italic">[Plate 01: Morning raking light over polished Gotland limestone.]</p>
     </section>
 
-    <!-- Two-Column Image Pairs -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+    <!-- 2. Two-Column Image Row -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
         <div>
-          <div class="aspect-[3/4] bg-[#E4DFD6] rounded-[4px] overflow-hidden">
+          <div class="aspect-[4/5] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+               data-full="assets/img/project-two-01.webp" data-title="[Plate 02: Tactile Earth Detail]" data-category="Detail" data-desc="Unglazed terracotta vessels with organic firing marks.">
             <img 
-              src="assets/img/case-detail-01.webp" 
+              src="assets/img/project-two-01.webp" 
               alt="[Tactile detail of unglazed terracotta vessel]" 
               width="800" 
-              height="1066" 
+              height="1000" 
               loading="lazy" 
-              class="w-full h-full object-cover" 
+              class="w-full h-full object-cover img-zoom-target" 
             />
           </div>
           <p class="text-[11px] text-[#8C857B] mt-2 italic">[Plate 02: Tactile study in raw earth and unglazed clay.]</p>
         </div>
         <div>
-          <div class="aspect-[3/4] bg-[#E4DFD6] rounded-[4px] overflow-hidden">
+          <div class="aspect-[4/5] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+               data-full="assets/img/project-two-02.webp" data-title="[Plate 03: Negative Space Studio Framing]" data-category="Architecture" data-desc="Negative space framing the studio pine forest.">
             <img 
-              src="assets/img/case-detail-02.webp" 
+              src="assets/img/project-two-02.webp" 
               alt="[Architectural negative space in studio window]" 
               width="800" 
-              height="1066" 
+              height="1000" 
               loading="lazy" 
-              class="w-full h-full object-cover" 
+              class="w-full h-full object-cover img-zoom-target" 
             />
           </div>
           <p class="text-[11px] text-[#8C857B] mt-2 italic">[Plate 03: Negative space framing the studio pine forest.]</p>
@@ -162,33 +170,104 @@
     </section>
 
     <!-- Editorial Pull Quote -->
-    <section class="max-w-4xl mx-auto px-6 text-center py-12">
-      <blockquote class="font-serif text-3xl sm:text-4xl text-[#111111] leading-relaxed italic">
+    <section class="max-w-4xl mx-auto px-6 text-center py-8">
+      <blockquote class="font-serif text-2xl sm:text-4xl text-[#111111] leading-relaxed italic">
         "[Light does not need to shout. When you allow shadows to breathe, the object assumes its own sacred gravity.]"
       </blockquote>
       <p class="text-xs uppercase tracking-widest text-[#8C857B] mt-4">— Notes from the Gotland field diary</p>
     </section>
 
-    <!-- Large Vertical Detail Shot -->
-    <section class="max-w-5xl mx-auto px-6 lg:px-12">
-      <div class="aspect-[16/10] bg-[#E4DFD6] rounded-[4px] overflow-hidden">
+    <!-- 3. Full-Width Panoramic Mid-Spread -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="aspect-[2/1] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+           data-full="assets/img/project-wide.webp" data-title="[Plate 04: Panoramic Workshop Spread]" data-category="Panoramic" data-desc="Panoramic view of the studio floor with morning shadows.">
         <img 
-          src="assets/img/case-detail-03.webp" 
-          alt="[Wide installation view of complete ceramic collection]" 
-          width="1200" 
-          height="750" 
+          src="assets/img/project-wide.webp" 
+          alt="[Panoramic studio floor spread with ceramics]" 
+          width="1600" 
+          height="800" 
           loading="lazy" 
-          class="w-full h-full object-cover" 
+          class="w-full h-full object-cover img-zoom-target" 
         />
+        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 text-[#111111] text-[11px] uppercase tracking-wider font-medium shadow-md">
+            View Fullscreen
+          </span>
+        </div>
+      </div>
+      <p class="text-[11px] text-[#8C857B] mt-2 italic">[Plate 04: Panoramic workshop spread across Gotland limestone floor.]</p>
+    </section>
+
+    <!-- 4. Three-Image Row -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+        <div>
+          <div class="aspect-[3/4] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+               data-full="assets/img/project-three-01.webp" data-title="[Plate 05: Glaze Crystallization]" data-category="Macro">
+            <img src="assets/img/project-three-01.webp" alt="[Glaze crystallization macro detail]" width="600" height="800" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          </div>
+          <p class="text-[11px] text-[#8C857B] mt-2 italic">[Plate 05: Glaze crystallization detail.]</p>
+        </div>
+        <div>
+          <div class="aspect-[3/4] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+               data-full="assets/img/project-three-02.webp" data-title="[Plate 06: Trimming Base]" data-category="Process">
+            <img src="assets/img/project-three-02.webp" alt="[Hands trimming leather-hard vessel base]" width="600" height="800" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          </div>
+          <p class="text-[11px] text-[#8C857B] mt-2 italic">[Plate 06: Trimming leather-hard clay base.]</p>
+        </div>
+        <div>
+          <div class="aspect-[3/4] bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+               data-full="assets/img/project-three-03.webp" data-title="[Plate 07: Kiln Gradation]" data-category="Firing">
+            <img src="assets/img/project-three-03.webp" alt="[Kiln cool-down color gradation]" width="600" height="800" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+          </div>
+          <p class="text-[11px] text-[#8C857B] mt-2 italic">[Plate 07: Kiln opening color gradation.]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Final Gallery Grid of 6 Different Images -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8 border-t border-[#E4DFD6]">
+      <div class="mb-6 flex justify-between items-baseline">
+        <h3 class="font-serif text-2xl sm:text-3xl text-[#111111]">
+          Archival Contact Sheet (6 Plates)
+        </h3>
+        <span class="text-xs uppercase tracking-widest text-[#8C857B]">Gotland Series Archive</span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/project-gal-01.webp" data-title="[Contact Sheet 01: Glazing Brushes]" data-category="Archive">
+          <img src="assets/img/project-gal-01.webp" alt="[Studio tools and glazing brushes]" width="700" height="700" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/project-gal-02.webp" data-title="[Contact Sheet 02: Test Tiles]" data-category="Archive">
+          <img src="assets/img/project-gal-02.webp" alt="[Stacked ceramic test tiles with mineral notes]" width="700" height="525" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/project-gal-03.webp" data-title="[Contact Sheet 03: North Light Vessel]" data-category="Archive">
+          <img src="assets/img/project-gal-03.webp" alt="[Solitary vessel in north-facing window light]" width="700" height="875" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/project-gal-04.webp" data-title="[Contact Sheet 04: Timber Drying Rack]" data-category="Archive">
+          <img src="assets/img/project-gal-04.webp" alt="[Weathered timber drying racks in workshop]" width="700" height="525" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/project-gal-05.webp" data-title="[Contact Sheet 05: Clay Dust Notebook]" data-category="Archive">
+          <img src="assets/img/project-gal-05.webp" alt="[Clay dust on handwritten notebook]" width="700" height="700" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+        </div>
+        <div class="aspect-square bg-[#E4DFD6] rounded-[4px] overflow-hidden cursor-pointer group relative js-lightbox-trigger"
+             data-full="assets/img/project-gal-06.webp" data-title="[Contact Sheet 06: Final Monograph]" data-category="Archive">
+          <img src="assets/img/project-gal-06.webp" alt="[Final catalog arrangement on linen]" width="700" height="875" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+        </div>
       </div>
     </section>
 
     <!-- Next Project Link -->
-    <section class="max-w-5xl mx-auto px-6 lg:px-12 pt-16 border-t border-[#E4DFD6]">
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 border-t border-[#E4DFD6]">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
           <span class="text-xs uppercase tracking-widest text-[#8C857B]">Next Case Study</span>
-          <h4 class="font-serif text-3xl text-[#111111] mt-1">[Villa Medicea: Florence Wedding Archive]</h4>
+          <h4 class="font-serif text-2xl sm:text-3xl text-[#111111] mt-1">[Villa Medicea: Florence Wedding Archive]</h4>
         </div>
         <a href="portfolio.html" class="btn-primary text-xs uppercase tracking-widest px-8 py-3.5">
           View Next Project →
@@ -198,7 +277,37 @@
 
   </main>
 
-  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-12 text-xs">
+  <!-- ========================================================================
+       GLOBAL FOOTER THIN IMAGE STRIP (6 images above footer text)
+       ======================================================================== -->
+  <div class="w-full grid grid-cols-3 sm:grid-cols-6 gap-0 border-t border-white/10 bg-[#111111]">
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-01.webp" data-title="[Architectural Staircase Rake]" data-category="Archive">
+      <img src="assets/img/footer-01.webp" alt="[Curved staircase and raking light]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-02.webp" data-title="[Overcoat Portrait Posture]" data-category="Archive">
+      <img src="assets/img/footer-02.webp" alt="[Monochrome portrait detail in overcoat]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-03.webp" data-title="[Terracotta Shaping on Wheel]" data-category="Archive">
+      <img src="assets/img/footer-03.webp" alt="[Hands working terracotta clay on wheel]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-04.webp" data-title="[Alpine Ridge Mist]" data-category="Archive">
+      <img src="assets/img/footer-04.webp" alt="[Fog rolling over alpine pine ridges]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-05.webp" data-title="[Tuscan Field Couple Walk]" data-category="Archive">
+      <img src="assets/img/footer-05.webp" alt="[Intimate couple silhouette across Tuscan field]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-06.webp" data-title="[Still Life Ceramic on Travertine]" data-category="Archive">
+      <img src="assets/img/footer-06.webp" alt="[Still life ceramic cup on travertine block]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+  </div>
+
+  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-10 text-xs">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
       <p class="font-serif text-lg text-white">[Elena Rostova] Studio</p>
       <div class="flex items-center gap-6 text-[11px] uppercase tracking-wider text-white/80">
@@ -211,6 +320,42 @@
       <p class="text-[11px]">Built with Folio Template</p>
     </div>
   </footer>
+
+  <!-- ========================================================================
+       FOLIO LIGHTBOX (PhotoSwipe-inspired responsive fullscreen viewer)
+       ======================================================================== -->
+  <div id="folio-lightbox" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox Viewer">
+    <div class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 sm:p-6 bg-gradient-to-b from-black/80 via-black/40 to-transparent">
+      <div class="flex items-center gap-3 text-white/90">
+        <span id="lightbox-counter" class="text-xs font-mono tracking-widest text-white/70 bg-white/10 px-3 py-1 rounded-full border border-white/10">1 / 1</span>
+        <span id="lightbox-badge" class="hidden sm:inline-block text-[10px] uppercase tracking-widest text-[#E4572E] font-medium bg-[#E4572E]/15 border border-[#E4572E]/30 px-2.5 py-0.5 rounded-full"></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="lightbox-zoom" class="lightbox-btn" aria-label="Toggle zoom" title="Toggle zoom">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"></path></svg>
+        </button>
+        <button id="lightbox-fs" class="lightbox-btn hidden sm:inline-flex" aria-label="Toggle fullscreen" title="Fullscreen (F)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"></path></svg>
+        </button>
+        <button id="lightbox-close" class="lightbox-btn" aria-label="Close Lightbox (Escape)" title="Close (Esc)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+    </div>
+    <button id="lightbox-prev" class="lightbox-btn lightbox-nav-btn" aria-label="Previous image" title="Previous (←)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
+    </button>
+    <button id="lightbox-next" class="lightbox-btn lightbox-nav-btn" aria-label="Next image" title="Next (→)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
+    </button>
+    <div class="lightbox-img-wrapper">
+      <img id="lightbox-img" src="" alt="Enlarged view" />
+      <div class="mt-4 text-center max-w-xl px-4">
+        <h3 id="lightbox-caption" class="font-serif text-lg sm:text-xl text-white font-normal"></h3>
+        <p id="lightbox-desc" class="text-xs text-white/60 mt-1 font-light"></p>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js"></script>

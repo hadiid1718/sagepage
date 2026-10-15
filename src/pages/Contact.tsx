@@ -40,41 +40,46 @@ export const Contact: React.FC<ContactProps> = ({ navigate }) => {
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
+                <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
                   Your Full Name
                 </label>
                 <input
+                  id="contact-name"
                   type="text"
                   required
+                  autoComplete="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Elena Vance"
-                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-sm focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none"
+                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-base focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none min-h-[44px] bg-white text-[#2B2B2B]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
+                <label htmlFor="contact-email" className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
                   Email Address
                 </label>
                 <input
+                  id="contact-email"
                   type="email"
                   required
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="elena@yourpractice.com"
-                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-sm focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none"
+                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-base focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none min-h-[44px] bg-white text-[#2B2B2B]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
+                <label htmlFor="contact-reason" className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
                   Reason for Inquiry
                 </label>
                 <select
+                  id="contact-reason"
                   value={reason}
                   onChange={(e) => setReason(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-sm focus:border-[#344E41] outline-none bg-white"
+                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-base focus:border-[#344E41] outline-none bg-white min-h-[44px] text-[#2B2B2B]"
                 >
                   <option value="Template question">Template question</option>
                   <option value="Customization">Customization</option>
@@ -84,22 +89,23 @@ export const Contact: React.FC<ContactProps> = ({ navigate }) => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
+                <label htmlFor="contact-message" className="block text-xs font-semibold uppercase tracking-wider text-[#344E41] mb-1.5">
                   Message
                 </label>
                 <textarea
+                  id="contact-message"
                   rows={4}
                   required
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="How can I help you today?"
-                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-sm focus:border-[#344E41] outline-none"
+                  className="w-full px-4 py-3 rounded-xl border border-[#E9E4D8] text-base focus:border-[#344E41] outline-none min-h-[100px] bg-white text-[#2B2B2B]"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-full bg-[#344E41] hover:bg-[#283d33] text-white font-medium text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 min-h-[44px]"
+                className="w-full py-4 rounded-full bg-[#344E41] hover:bg-[#283d33] text-white font-medium text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 min-h-[48px] touch-target shadow-xs"
               >
                 <Send className="w-4 h-4" />
                 <span>Send Message</span>

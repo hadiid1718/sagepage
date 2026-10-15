@@ -32,6 +32,17 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'apple_pay' | 'google_pay'>('card');
   const [isProcessing, setIsProcessing] = useState(false);
 
+  // Close modal on Escape key press
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const tierPrices = {
@@ -202,25 +213,27 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] text-[#2B2B2B]/70 mb-1">Your Full Name</label>
+                <label className="block text-xs text-[#2B2B2B]/70 mb-1">Your Full Name</label>
                 <input
                   type="text"
                   required
+                  autoComplete="name"
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
                   placeholder="e.g. Sarah Jenkins"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E9E4D8] bg-white text-sm focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E9E4D8] bg-white text-base focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none min-h-[44px]"
                 />
               </div>
               <div>
-                <label className="block text-[11px] text-[#2B2B2B]/70 mb-1">Email Address (for download link)</label>
+                <label className="block text-xs text-[#2B2B2B]/70 mb-1">Email Address (for download link)</label>
                 <input
                   type="email"
                   required
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="coach@yourpractice.com"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E9E4D8] bg-white text-sm focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E9E4D8] bg-white text-base focus:border-[#344E41] focus:ring-1 focus:ring-[#344E41] outline-none min-h-[44px]"
                 />
               </div>
             </div>
@@ -233,7 +246,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               id="order-bump"
               checked={includeOrderBump}
               onChange={(e) => setIncludeOrderBump(e.target.checked)}
-              className="w-5 h-5 rounded text-[#344E41] border-[#E9E4D8] focus:ring-[#344E41] mt-0.5 cursor-pointer"
+              className="w-5 h-5 rounded text-[#344E41] border-[#E9E4D8] focus:ring-[#344E41] mt-0.5 cursor-pointer min-h-[20px] min-w-[20px]"
             />
             <label htmlFor="order-bump" className="flex-1 cursor-pointer">
               <div className="flex items-center justify-between">
@@ -258,12 +271,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 value={couponCode}
                 onChange={(e) => setCouponCode(e.target.value)}
                 placeholder="Discount code (try LAUNCH20)"
-                className="flex-1 px-3.5 py-2 rounded-xl border border-[#E9E4D8] bg-white text-xs uppercase tracking-wider focus:border-[#344E41] outline-none"
+                className="flex-1 px-3.5 py-2.5 rounded-xl border border-[#E9E4D8] bg-white text-base uppercase tracking-wider focus:border-[#344E41] outline-none min-h-[44px]"
               />
               <button
                 type="button"
                 onClick={handleApplyCoupon}
-                className="px-4 py-2 bg-[#E9E4D8] hover:bg-[#ded7c8] text-[#344E41] text-xs font-semibold rounded-xl transition-colors cursor-pointer"
+                className="px-5 py-2.5 bg-[#E9E4D8] hover:bg-[#ded7c8] text-[#344E41] text-xs font-semibold rounded-xl transition-colors cursor-pointer min-h-[44px] touch-target"
               >
                 Apply
               </button>

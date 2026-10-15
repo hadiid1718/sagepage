@@ -56,7 +56,7 @@ export const CookieNotice: React.FC = () => {
   return (
     <aside
       aria-label="Cookie consent banner"
-      className="fixed z-50 bottom-4 left-4 right-4 sm:right-auto sm:max-w-md bg-white border border-[#E9E4D8] rounded-2xl shadow-xl p-5 text-sm animate-in slide-in-from-bottom duration-300"
+      className="fixed z-50 bottom-20 sm:bottom-4 left-4 right-4 sm:right-auto sm:max-w-md bg-white border border-[#E9E4D8] rounded-2xl shadow-xl p-5 text-sm animate-in slide-in-from-bottom duration-300 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] sm:pb-5"
     >
       {!showSettings ? (
         <div>
@@ -89,13 +89,13 @@ export const CookieNotice: React.FC = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={handleDecline}
-                className="px-3.5 py-1.5 rounded-full border border-[#E9E4D8] text-xs font-medium text-[#2B2B2B] hover:bg-[#FAF7F2] transition-colors"
+                className="px-4 py-2.5 rounded-full border border-[#E9E4D8] text-xs font-medium text-[#2B2B2B] hover:bg-[#FAF7F2] transition-colors min-h-[44px] touch-target flex items-center justify-center"
               >
                 Decline
               </button>
               <button
                 onClick={handleAccept}
-                className="px-4 py-1.5 rounded-full bg-[#344E41] text-xs font-medium text-white hover:bg-[#283d33] transition-colors shadow-xs"
+                className="px-5 py-2.5 rounded-full bg-[#344E41] text-xs font-medium text-white hover:bg-[#283d33] transition-colors shadow-xs min-h-[44px] touch-target flex items-center justify-center"
               >
                 Accept
               </button>

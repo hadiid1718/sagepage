@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   
   <!-- EDIT: Title and Meta -->
   <title>Portfolio & Selected Works · [Elena Rostova]</title>
@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://example.com/portfolio.html" />
 
   <meta property="og:title" content="Portfolio · [Elena Rostova]" />
-  <meta property="og:description" content="[Selected photographic and visual works.]" />
+  <meta property="og:description" content="[Selected photographic and visual works across Portraits, Brand, Weddings, and Travel.]" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/og-image.webp" />
 
@@ -88,211 +88,282 @@
     </div>
   </div>
 
-  <main id="main-content" class="pt-32 pb-24 sm:pb-32">
+  <main id="main-content" class="pt-28 pb-16 lg:pb-24">
     <!-- Header Hero -->
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
-      <div class="max-w-2xl space-y-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-8">
+      <div class="max-w-2xl space-y-2">
         <span class="text-xs uppercase tracking-widest text-[#E4572E] font-medium block">
-          Visual Archives
+          Visual Archives · 2024–2026
         </span>
-        <h1 class="font-serif text-5xl sm:text-6xl text-[#111111] font-normal tracking-tight">
+        <h1 class="font-serif text-4xl sm:text-5xl text-[#111111] font-normal tracking-tight">
           Portfolio & Works
         </h1>
-        <p class="text-base text-[#8C857B] leading-relaxed">
-          A selection of commissioned lookbooks, private portraits, and spatial architecture studies. Click any frame to view in high-resolution lightbox.
+        <p class="text-sm text-[#8C857B] leading-relaxed">
+          Curated selection of commissioned lookbooks, private portraits, and spatial architecture studies. Click any frame to view in high-resolution full screen.
         </p>
       </div>
 
       <!-- EDIT: Category filter buttons -->
-      <div class="mt-10 pb-4 border-b border-[#E4DFD6] flex flex-wrap gap-2 sm:gap-6 text-xs uppercase tracking-widest font-medium" role="tablist">
+      <div class="mt-8 pb-3 border-b border-[#E4DFD6] flex flex-wrap gap-2 sm:gap-6 text-xs uppercase tracking-widest font-medium" role="tablist">
         <button class="folio-filter-btn pb-2 text-[#111111] border-b-2 border-[#111111] font-semibold transition-all cursor-pointer" data-category="all">
-          All Works
-        </button>
-        <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="weddings">
-          Weddings
+          All Works (16)
         </button>
         <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="portraits">
-          Portraits
+          Portraits (5)
         </button>
         <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="brand">
-          Brand
+          Brand (4)
+        </button>
+        <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="weddings">
+          Weddings (3)
         </button>
         <button class="folio-filter-btn pb-2 text-[#8C857B] border-b-2 border-transparent hover:text-[#111111] transition-all cursor-pointer" data-category="travel">
-          Travel
+          Travel (4)
         </button>
       </div>
     </div>
 
-    <!-- Masonry Gallery -->
-    <!-- EDIT: Gallery items and categories -->
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Column-Based Masonry (Balanced columns, no vertical or horizontal empty gaps) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div id="portfolio-gallery" class="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
         
         <!-- Item 01 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="portraits">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-01.webp" 
-              data-full="assets/img/work-01.webp"
-              data-title="[Monolith Series: Ceramic Study]"
-              data-category="Portraits"
-              alt="[Monolith: Ceramic study and architectural shadow]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="portraits">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-01.webp" data-title="[Monolith: Ceramic Study]" data-category="Portraits">
+            <img src="assets/img/work-01.webp" alt="[Monolith ceramic study and shadow]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Monolith: Study I · Portraits]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Monolith: Study I]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Monolith: Study I]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
           </div>
         </div>
 
         <!-- Item 02 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="brand">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-02.webp" 
-              data-full="assets/img/work-02.webp"
-              data-title="[Solis Lookbook: Ateliers de Marseille]"
-              data-category="Brand"
-              alt="[Solis coastal light campaign]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="brand">
+          <div class="aspect-[3/2] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-02.webp" data-title="[Solis Lookbook: Marseille]" data-category="Brand">
+            <img src="assets/img/work-02.webp" alt="[Solis coastal light campaign]" width="900" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Solis Campaign · Brand]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Solis Campaign]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Solis Campaign]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
           </div>
         </div>
 
         <!-- Item 03 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="portraits">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-03.webp" 
-              data-full="assets/img/work-03.webp"
-              data-title="[The Quiet Gesture: High Fashion]"
-              data-category="Portraits"
-              alt="[The Quiet Gesture editorial portrait]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="portraits">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-03.webp" data-title="[The Quiet Gesture: High Fashion]" data-category="Portraits">
+            <img src="assets/img/work-03.webp" alt="[The Quiet Gesture editorial portrait]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[The Quiet Gesture · Portraits]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[The Quiet Gesture]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[The Quiet Gesture]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
           </div>
         </div>
 
         <!-- Item 04 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="weddings">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-04.webp" 
-              data-full="assets/img/work-04.webp"
-              data-title="[Villa Medicea: Intimate Tuscan Wedding]"
-              data-category="Weddings"
-              alt="[Villa Medicea wedding ceremony in Tuscany]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="weddings">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-04.webp" data-title="[Villa Medicea: Intimate Tuscan Wedding]" data-category="Weddings">
+            <img src="assets/img/work-04.webp" alt="[Villa Medicea wedding story in Val d'Orcia]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Villa Medicea · Weddings]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Villa Medicea]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Weddings]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Villa Medicea]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Weddings]</span>
           </div>
         </div>
 
         <!-- Item 05 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="travel">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-05.webp" 
-              data-full="assets/img/work-05.webp"
-              data-title="[Kyoto Pavilions: Spatial Studies]"
-              data-category="Travel"
-              alt="[Kyoto Pavilions spatial study]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="travel">
+          <div class="aspect-[3/2] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-05.webp" data-title="[Kyoto Pavilions: Spatial Geometry]" data-category="Travel">
+            <img src="assets/img/work-05.webp" alt="[Kyoto Pavilions spatial geometry]" width="900" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Kyoto Pavilions · Travel]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Kyoto Pavilions]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Travel]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Kyoto Pavilions]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Travel]</span>
           </div>
         </div>
 
         <!-- Item 06 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="portraits">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-06.webp" 
-              data-full="assets/img/work-06.webp"
-              data-title="[Elysian Shadows: Bronze & Skin]"
-              data-category="Portraits"
-              alt="[Elysian Shadows portrait sitting]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="portraits">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-06.webp" data-title="[Elysian Shadows: Bronze & Ceramic]" data-category="Portraits">
+            <img src="assets/img/work-06.webp" alt="[Elysian Shadows still life ceramic]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Elysian Shadows · Portraits]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Elysian Shadows]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Elysian Shadows]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
           </div>
         </div>
 
         <!-- Item 07 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="weddings">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-07.webp" 
-              data-full="assets/img/work-07.webp"
-              data-title="[Amalfi Coast: Midnight Reverie]"
-              data-category="Weddings"
-              alt="[Amalfi Coast wedding celebration]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="brand">
+          <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-07.webp" data-title="[Aura Fragrance: Noon Light]" data-category="Brand">
+            <img src="assets/img/work-07.webp" alt="[Aura fragrance glass flacon]" width="600" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Aura Fragrance · Brand]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Ravello Evening]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Weddings]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Aura Fragrance]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
           </div>
         </div>
 
         <!-- Item 08 -->
-        <div class="folio-gallery-item group cursor-pointer" data-category="brand">
-          <div class="aspect-[3/4] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative">
-            <img 
-              src="assets/img/work-08.webp" 
-              data-full="assets/img/work-08.webp"
-              data-title="[Maison Lin: Textile Textures]"
-              data-category="Brand"
-              alt="[Maison Lin organic linen textures]" 
-              width="800" 
-              height="1066" 
-              loading="lazy" 
-              class="js-lightbox-trigger img-editorial w-full h-full object-cover" 
-            />
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="weddings">
+          <div class="aspect-[3/2] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-08.webp" data-title="[Coastline Vows: Candid Walk]" data-category="Weddings">
+            <img src="assets/img/work-08.webp" alt="[Coastline vows documentary wedding walk]" width="900" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Coastline Vows · Weddings]</span>
+            </div>
           </div>
-          <div class="pt-3 flex justify-between items-baseline text-xs">
-            <span class="font-serif text-xl text-[#111111] group-hover:text-[#E4572E] transition-colors">[Maison Lin]</span>
-            <span class="text-[11px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Coastline Vows]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Weddings]</span>
+          </div>
+        </div>
+
+        <!-- Item 09 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="travel">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-09.webp" data-title="[Amalfi Morning: Sea Mist]" data-category="Travel">
+            <img src="assets/img/work-09.webp" alt="[Amalfi pastel facades and sea mist]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Amalfi Morning · Travel]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Amalfi Morning]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Travel]</span>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="portraits">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-10.webp" data-title="[Studio Diptych: Monochromatic Study]" data-category="Portraits">
+            <img src="assets/img/work-10.webp" alt="[Studio diptych monochromatic study]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Studio Diptych · Portraits]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Studio Diptych]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="brand">
+          <div class="aspect-[3/2] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-11.webp" data-title="[Raw Linen: Minimal Textiles]" data-category="Brand">
+            <img src="assets/img/work-11.webp" alt="[Raw linen minimal textiles lookbook]" width="900" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Raw Linen · Brand]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Raw Linen]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="travel">
+          <div class="aspect-square bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-12.webp" data-title="[Atlas Mountain Mist at Dawn]" data-category="Travel">
+            <img src="assets/img/work-12.webp" alt="[Atlas mountain mist solitary ridge]" width="600" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Atlas Mist · Travel]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Atlas Mist]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Travel]</span>
+          </div>
+        </div>
+
+        <!-- Item 13 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="weddings">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-13.webp" data-title="[Under the Olive Grove: Dinner]" data-category="Weddings">
+            <img src="assets/img/work-13.webp" alt="[Candlelight wedding dinner under olive grove]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Olive Grove Dinner · Weddings]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Olive Grove Dinner]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Weddings]</span>
+          </div>
+        </div>
+
+        <!-- Item 14 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="brand">
+          <div class="aspect-[3/2] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-14.webp" data-title="[Nordic Living: Sculptural Oak]" data-category="Brand">
+            <img src="assets/img/work-14.webp" alt="[Nordic living sculptural oak chairs]" width="900" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Nordic Living · Brand]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Nordic Living]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Brand]</span>
+          </div>
+        </div>
+
+        <!-- Item 15 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="portraits">
+          <div class="aspect-[4/5] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-15.webp" data-title="[Linen & Light: Afternoon Gloom]" data-category="Portraits">
+            <img src="assets/img/work-15.webp" alt="[Window silhouette in afternoon light]" width="800" height="1000" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Linen & Light · Portraits]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Linen & Light]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Portraits]</span>
+          </div>
+        </div>
+
+        <!-- Item 16 -->
+        <div class="folio-gallery-item group break-inside-avoid mb-4 cursor-pointer" data-category="travel">
+          <div class="aspect-[3/2] bg-[#E4DFD6] overflow-hidden rounded-[4px] relative js-lightbox-trigger"
+               data-full="assets/img/work-16.webp" data-title="[Venetian Lagoon in Winter Fog]" data-category="Travel">
+            <img src="assets/img/work-16.webp" alt="[Venetian lagoon wooden poles in fog]" width="900" height="600" loading="lazy" class="w-full h-full object-cover img-zoom-target" />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+              <span class="text-white text-xs font-serif">[Venetian Lagoon · Travel]</span>
+            </div>
+          </div>
+          <div class="pt-2 flex justify-between items-baseline text-xs">
+            <span class="font-serif text-base text-[#111111] group-hover:text-[#E4572E] transition-colors">[Venetian Lagoon]</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#8C857B]">[Travel]</span>
           </div>
         </div>
 
@@ -301,43 +372,37 @@
   </main>
 
   <!-- ========================================================================
-       LIGHTBOX COMPONENT (Next, Previous, Close, Keyboard Arrows, Escape)
+       GLOBAL FOOTER THIN IMAGE STRIP (6 images above footer text)
        ======================================================================== -->
-  <div id="folio-lightbox" class="fixed inset-0 z-50 bg-[#111111]/95 hidden items-center justify-center p-4 sm:p-10" role="dialog" aria-modal="true" aria-label="Image Lightbox Viewer">
-    
-    <!-- Close Button -->
-    <button id="lightbox-close" class="absolute top-6 right-6 p-3 text-white/80 hover:text-white transition-colors focus:outline-none" aria-label="Close Lightbox (Escape)">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-
-    <!-- Previous Button -->
-    <button id="lightbox-prev" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 text-white/80 hover:text-white transition-colors focus:outline-none" aria-label="Previous Image (Left Arrow)">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-      </svg>
-    </button>
-
-    <!-- Next Button -->
-    <button id="lightbox-next" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 text-white/80 hover:text-white transition-colors focus:outline-none" aria-label="Next Image (Right Arrow)">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-      </svg>
-    </button>
-
-    <!-- Active Image Container -->
-    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
-      <img id="lightbox-img" src="" alt="Enlarged view" class="lightbox-content max-w-full max-h-[75vh] object-contain rounded-[2px]" />
-      <div class="mt-4 text-center text-white/90">
-        <p id="lightbox-caption" class="text-sm"></p>
-        <p id="lightbox-counter" class="text-[11px] font-mono text-white/50 mt-1"></p>
-      </div>
+  <div class="w-full grid grid-cols-3 sm:grid-cols-6 gap-0 border-t border-white/10 bg-[#111111]">
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-01.webp" data-title="[Architectural Staircase Rake]" data-category="Archive">
+      <img src="assets/img/footer-01.webp" alt="[Curved staircase and raking light]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-02.webp" data-title="[Overcoat Portrait Posture]" data-category="Archive">
+      <img src="assets/img/footer-02.webp" alt="[Monochrome portrait detail in overcoat]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-03.webp" data-title="[Terracotta Shaping on Wheel]" data-category="Archive">
+      <img src="assets/img/footer-03.webp" alt="[Hands working terracotta clay on wheel]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-04.webp" data-title="[Alpine Ridge Mist]" data-category="Archive">
+      <img src="assets/img/footer-04.webp" alt="[Fog rolling over alpine pine ridges]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-05.webp" data-title="[Tuscan Field Couple Walk]" data-category="Archive">
+      <img src="assets/img/footer-05.webp" alt="[Intimate couple silhouette across Tuscan field]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
+    </div>
+    <div class="aspect-[3/2] overflow-hidden cursor-pointer js-lightbox-trigger group relative"
+         data-full="assets/img/footer-06.webp" data-title="[Still Life Ceramic on Travertine]" data-category="Archive">
+      <img src="assets/img/footer-06.webp" alt="[Still life ceramic cup on travertine block]" width="600" height="400" loading="lazy" class="w-full h-full object-cover img-zoom-target opacity-80 group-hover:opacity-100 transition-opacity" />
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-12 text-xs">
+  <footer class="bg-[#111111] text-white/60 border-t border-white/10 py-10 text-xs">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
       <p class="font-serif text-lg text-white">[Elena Rostova] Studio</p>
       <div class="flex items-center gap-6 text-[11px] uppercase tracking-wider text-white/80">
@@ -350,6 +415,42 @@
       <p class="text-[11px]">Built with Folio Template</p>
     </div>
   </footer>
+
+  <!-- ========================================================================
+       FOLIO LIGHTBOX (PhotoSwipe-inspired responsive fullscreen viewer)
+       ======================================================================== -->
+  <div id="folio-lightbox" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox Viewer">
+    <div class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 sm:p-6 bg-gradient-to-b from-black/80 via-black/40 to-transparent">
+      <div class="flex items-center gap-3 text-white/90">
+        <span id="lightbox-counter" class="text-xs font-mono tracking-widest text-white/70 bg-white/10 px-3 py-1 rounded-full border border-white/10">1 / 1</span>
+        <span id="lightbox-badge" class="hidden sm:inline-block text-[10px] uppercase tracking-widest text-[#E4572E] font-medium bg-[#E4572E]/15 border border-[#E4572E]/30 px-2.5 py-0.5 rounded-full"></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="lightbox-zoom" class="lightbox-btn" aria-label="Toggle zoom" title="Toggle zoom">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"></path></svg>
+        </button>
+        <button id="lightbox-fs" class="lightbox-btn hidden sm:inline-flex" aria-label="Toggle fullscreen" title="Fullscreen (F)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"></path></svg>
+        </button>
+        <button id="lightbox-close" class="lightbox-btn" aria-label="Close Lightbox (Escape)" title="Close (Esc)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+    </div>
+    <button id="lightbox-prev" class="lightbox-btn lightbox-nav-btn" aria-label="Previous image" title="Previous (←)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
+    </button>
+    <button id="lightbox-next" class="lightbox-btn lightbox-nav-btn" aria-label="Next image" title="Next (→)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
+    </button>
+    <div class="lightbox-img-wrapper">
+      <img id="lightbox-img" src="" alt="Enlarged view" />
+      <div class="mt-4 text-center max-w-xl px-4">
+        <h3 id="lightbox-caption" class="font-serif text-lg sm:text-xl text-white font-normal"></h3>
+        <p id="lightbox-desc" class="text-xs text-white/60 mt-1 font-light"></p>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js"></script>
